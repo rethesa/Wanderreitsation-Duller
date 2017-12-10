@@ -1,0 +1,42 @@
+body {
+  font-family: 'Droid Sans', sans-serif;
+  background-color: #E5DEE3;
+}
+
+h1 {
+	font-size: 13px;
+	color: #FFFFFF;
+}
+
+h2 {
+	font-size: 13px;
+	color: #000000;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+nav{
+  font-size: 13px;
+  color: white;
+}
+
+section{
+  position: absolute;
+    top: 200px;
+    bottom: 30px;
+    right: 5px;
+    width: 800px;
+  font-size: 13px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+#wrapper {
+	position: relative;
+	  width: 1000px; 
+	  margin: 0 auto; 
+	background-color: #000000;
+}
