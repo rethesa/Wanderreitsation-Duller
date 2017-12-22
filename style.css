@@ -1,14 +1,50 @@
 body {
-  font-family: 'Droid Sans', sans-serif;
-  background-color: #E5DEE3;
+	background-color: #E5DEE3;
+	position: relative;
+	  width: 1000px; 
+	  margin: 0 auto; 
+}
+
+#page{
+	background-color: #000000;
+}
+
+#header {
+	background-color: #000000;
+}
+
+#nav{
+	background-color: #000000;
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1em;	
+	padding: 1em; 
+	width: 200px;
+}
+
+#content{
+	background-color: #FFFFFF;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	padding: 1em; 
+	width: 710px;
 }
 
 h1 {
 	font-size: 13px;
+	padding: 1em;
 	color: #FFFFFF;
 }
 
 h2 {
+	font-size: 13px;
+	color: #FFFFFF;
+}
+
+h3 {
 	font-size: 13px;
 	color: #000000;
 }
@@ -18,25 +54,30 @@ li {
   padding: 5px;
 }
 
-nav{
-  font-size: 13px;
-  color: white;
+li a {
+    display: block;
+    width: 100px;
+	color: #FFFFFF;
+	
+	padding: 5px 0px;
+    text-decoration: none;
 }
 
-section{
-  position: absolute;
-    top: 200px;
-    bottom: 30px;
-    right: 5px;
-    width: 800px;
-  font-size: 13px;
-  color: #000000;
-  background-color: #FFFFFF;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	width: 200px;
+    background-color: #000000;
 }
 
-#wrapper {
-	position: relative;
-	  width: 1000px; 
-	  margin: 0 auto; 
-	background-color: #000000;
+
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
 }
+
+
+
