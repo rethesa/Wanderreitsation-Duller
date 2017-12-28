@@ -4,7 +4,7 @@ body {
 	  width: 1000px; 
 	  margin: 0 auto; 
 	font-size: 13px;
-	font-family: "Times New Roman", Times, serif;
+	font-family: Calibri, Candara, Arial;
 }
 
 #page{
@@ -31,7 +31,8 @@ body {
 	background-color: #FFFFFF;
 	margin-bottom: 1em;
 	margin-right: 1em; 
-	padding: 0em 3em; /*abstand text zu rand*/
+	padding: 0em 3em; 
+	padding-bottom: 1em;
 }
 
 #contact{
@@ -40,23 +41,22 @@ body {
 }
 
 #map {
-	/*AIzaSyD-m6r-MAJeM8-wtpThMIIO0Wc-MKUrtZE*/
 	display: inline-block;
 	width:400px;
 	height:400px;
 	vertical-align: top;
-	background-color: #F3FF4F;
-	
+	background-color: #FFFFFF;	
 }
 
 #left {
 	display: inline-block;
 	width: 280px;
+	vertical-align: top;
 	margin-right: 1em;
 }
 
 h1 {
-	font-size: 13px;
+	font-size: 16px;
 	padding: 0em 1em;
 	color: #FFFFFF;
 }
@@ -69,6 +69,11 @@ h2 {
 
 h3 {
 	font-size: 13px;
+	color: #000000;
+}
+
+h4 {
+	font-size: 16px;
 	color: #000000;
 }
 
@@ -110,26 +115,15 @@ li a {
 
 /*funktioniert irgendwie noch nicht!!*/
 li a.active {
-    background-color: green;
-    color: white;
+    background-color: #007F00;
+    color: #FFFFFF;
 }
 
-/* Change the link color on hover */
 li a:hover:not(.active) {
-    background-color: blue;
-    color: white;
+    background-color: #484848;
+    color: #FFFFFF;
 }
 
 li:last-child {
     border-bottom: none;
 }
-
-
-
-
-
-
-
-
-
-
