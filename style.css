@@ -56,6 +56,22 @@ h3 {
 	color: #000000;
 }
 
+table {
+    border-collapse: collapse;
+	text-align: left;
+	border-spacing: 15px 30px;
+	width: 400px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+    padding: 0.5em;
+	width: 100px;
+}
+
 li {
 	list-style-type: none;
 	border-bottom: 1px solid #484848;
