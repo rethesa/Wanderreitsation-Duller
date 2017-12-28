@@ -3,6 +3,8 @@ body {
 	position: relative;
 	  width: 1000px; 
 	  margin: 0 auto; 
+	font-size: 13px;
+	font-family: "Times New Roman", Times, serif;
 }
 
 #page{
@@ -14,33 +16,38 @@ body {
 }
 
 #nav{
+	display: inline-block;
+	width: 200px;
+	vertical-align: top;
 	background-color: #000000;
 	color: white;
-	display: inline-block;
-	vertical-align: top;
-	margin-bottom: 1em;	
-	padding: 1em; 
-	width: 200px;
+	padding: 0;
 }
 
 #content{
-	background-color: #FFFFFF;
 	display: inline-block;
+	width: 700px;
 	vertical-align: top;
+	background-color: #FFFFFF;
 	margin-bottom: 1em;
-	margin-right: 1em;
-	padding: 1em; 
-	width: 710px;
+	margin-right: 1em; 
+	padding: 0em 3em; /*abstand text zu rand*/
+}
+
+#contact{
+	font-size: 13px;
+	padding: 0em 1em;
 }
 
 h1 {
 	font-size: 13px;
-	padding: 1em;
+	padding: 0em 1em;
 	color: #FFFFFF;
 }
 
 h2 {
 	font-size: 13px;
+	padding: 0em 1em;
 	color: #FFFFFF;
 }
 
@@ -50,34 +57,47 @@ h3 {
 }
 
 li {
-  list-style-type: none;
-  padding: 5px;
-}
-
-li a {
-    display: block;
-    width: 100px;
-	color: #FFFFFF;
-	
-	padding: 5px 0px;
-    text-decoration: none;
+	list-style-type: none;
+	border-bottom: 1px solid #484848;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-	width: 200px;
+	padding: 0;
     background-color: #000000;
+	border: 1px solid #484848;
 }
 
+li a {
+    display: block;
+	color: #FFFFFF;
+	padding: 0.5em 1em;
+    text-decoration: none;
+}
 
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #555;
+/*funktioniert irgendwie noch nicht!!*/
+li a.active {
+    background-color: green;
     color: white;
 }
+
+/* Change the link color on hover */
+li a:hover:not(.active) {
+    background-color: blue;
+    color: white;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
 
 
 
