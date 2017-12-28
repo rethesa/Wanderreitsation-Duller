@@ -8,34 +8,63 @@
   </head>
   
   <body>
-  <div id = "wrapper">
-  
-	<header>
-		<img src="pictures\hof.jpg" alt="Hof" >	
-	</header>
-	<nav>
-		<h1>Wanderreitstation im Duller</h1>
-		<ul>
-			<li><a href="mainPage.html">Startseite</a></li>
-			<li><a href="accomodation.html">Unterkunft</a></li>
-			<li><a href="horseBarn.html">Pferdestall</a></li>
-			<li><a href="pictures.html">Bilder</a></li>
-			<li><a href="approach.html">Anfahrt</a></li>
-			<li><a href="about.html">Impressum</a></li>
-		</ul>
-		<br>
-		<br>
-		<h2>Kontakt</h2>
-		<p>Christa und Peter Heine <br>
-		Duller 3 <br>
-		88285 Bodnegg <br>
-		Tel.: 07520/91230 <br>
-		Email: christa.heine@gmx.net</p>
-	</nav>
-	<section>
-		<h2>Anfahrt</h2>
-	</section>
+	<div id = "page">
+		<div id = "header">
+			<img src="pictures\hof.jpg" alt="Hof" >	
+			<h1>Wanderreitstation im Duller</h1>
+		</div>
+		<div id = "nav">
+			<ul>
+				<li><a href="mainPage.html">Startseite</a></li>
+				<li><a href="accomodation.html">Unterkunft</a></li>
+				<li><a href="horseBarn.html">Pferdestall</a></li>
+				<li><a href="pictures.html">Bilder</a></li>
+				<li><a href="approach.html">Anfahrt</a></li>
+				<li><a href="about.html">Impressum</a></li>
+			</ul>
+			<br>
+			<br>
+			<h2>Kontakt</h2>
+			<div id = "contact">
+				<p>Christa und Peter Heine <br>
+				Duller 3 <br>
+				88285 Bodnegg <br>
+				Tel.: 07520/91230 <br>
+				Email: christa.heine@gmx.net</p>
+			</div>
+		</div>
+		<div id = "content">
+			<h3>Anfahrt</h3>
+			<div id = "left">
+				<p>Christa und Peter Heine<br>
+				Duller 3<br>
+				88285 Bodnegg<br>
+				<br>
+				Tel.: 07520/91230<br>
+				Email: christa.heine@gmx.net<br>
+				<br>
+				Wir bevorzugen eine telefonische Kontaktaufnahme.</p>
+			</div>
+			<div id="map"></div>
+			<script>
+				function initMap() {
+					var myLatLng = {lat: 47.693720, lng: 9.712840};
 
-  </div>
+					var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 12,
+					center: myLatLng
+					});
+
+					var marker = new google.maps.Marker({
+					position: myLatLng,
+					map: map,
+					title: 'Position'
+					});
+				}
+			</script>
+			<script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD-m6r-MAJeM8-wtpThMIIO0Wc-MKUrtZE&callback=initMap"></script>
+			<p></p>
+		</div>		
+	</div>
   </body>
 </html>

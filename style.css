@@ -39,6 +39,22 @@ body {
 	padding: 0em 1em;
 }
 
+#map {
+	/*AIzaSyD-m6r-MAJeM8-wtpThMIIO0Wc-MKUrtZE*/
+	display: inline-block;
+	width:400px;
+	height:400px;
+	vertical-align: top;
+	background-color: #F3FF4F;
+	
+}
+
+#left {
+	display: inline-block;
+	width: 280px;
+	margin-right: 1em;
+}
+
 h1 {
 	font-size: 13px;
 	padding: 0em 1em;
