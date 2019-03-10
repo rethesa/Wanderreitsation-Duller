@@ -35,6 +35,11 @@ body {
 	padding-bottom: 1em;
 }
 
+#img {
+	width: 500px;
+	height: auto;
+}
+
 #contact{
 	font-size: 13px;
 	padding: 0em 1em;
