@@ -8,7 +8,61 @@
     <title>Bilder</title>
 	<link rel="icon" href="icon.png">
 	<link rel="stylesheet" type="text/css" href=style.css>
-  </head>
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+
+	<script>
+		$(function(){
+			images = [
+				{"name": "franziGesicht", "alt": "Franziska"},
+				{"name": "syncronFressen", "alt": "Synchron Fressen"},
+				{"name": "franziMeli", "alt": "Franziska und Meli"},
+				{"name": "mamaVorne", "alt": "Christa"},
+				{"name": "mamaFluss2", "alt": "Christa"},
+				{"name": "mamaHaeltPferde", "alt": "Christa"},
+				{"name": "haus", "alt": "Haus"},
+				{"name": "paddock1", "alt": "Paddock"},
+				{"name": "mamaTraktor", "alt": "Christa"},
+				{"name": "paddock2", "alt": "Paddock"},
+				{"name": "papaNah", "alt": "Peter"},
+				{"name": "papaFluss", "alt": "Peter"},
+				{"name": "papaFanziMeli", "alt": "Peter, Franziska und Meli"},
+				{"name": "papaUmzug", "alt": "Peter"},
+				{"name": "pferdekuss", "alt": "Pferdekuss"},
+				{"name": "reitenFahrrad", "alt": "Fahrradfahren und Reiten"},
+				{"name": "romanHeiben", "alt": "Roman"},
+				{"name": "vogelansicht", "alt": "Vogelansicht"},
+				{"name": "franziHinten", "alt": "Franziska"},
+				{"name": "mama", "alt": "Christa"}
+			];
+			$.each(images, function(index, value) {
+				var name = value["name"];
+				var alt = value["alt"];
+				$(".image-container").append(
+					'<img src="pictures\\pics\\' + name + 'klein.jpg" alt="' + alt + '" class="gallery-image" id="img-' + index + '">'
+				);
+			})
+
+   			$('.gallery-image').click(function(){
+				selected = null;
+				$('.selected-image').each(
+					function() {
+						selected = $(this);
+						$(this).removeClass("selected-image");
+					}
+				);
+				if (selected == null || selected.attr("id") != $(this).attr("id"))
+				{
+					$(this).addClass("selected-image");
+					var newSrc = $(this).attr("src").replace("klein", "");
+					$(this).attr("src", newSrc);
+				}
+   			});
+		});
+	</script>
+</head>
   
   <body>
 	<div id = "page">
@@ -28,7 +82,7 @@
 			<br>
 			<br>
 			<h2>KONTAKT</h2>
-			<div id = contact>
+			<div id = "contact">
 				<p>Christa und Peter Heine <br>
 				Duller 3 <br>
 				88285 Bodnegg <br>
@@ -36,50 +90,10 @@
 				Email: christa.heine@gmx.net</p>
 			</div>
 		</div>
-		<div id = content>
+		<div id = "content" class="image-container">
 			<h4>BILDER</h4>
 			<p>In unserer Familie spielen Pferde und das Reiten eine große Rolle. Um Ihnen einen Eindruck von uns zu verschaffen 
 			sind im folgenden ein paar Bilder von uns.</p>
-			<img src="pictures\pics\franziGesichtklein.jpg" alt="Franziska">
-			<img src="pictures\pics\syncronFressenklein.jpg" alt="Synchron Fressen">
-			<br>
-			<br>
-			<img src="pictures\pics\franziMeliklein.jpg" alt="Franziska und Meli">
-			<img src="pictures\pics\mamaVorneklein.jpg" alt="Christa">
-			<br>
-			<br>
-			<img src="pictures\pics\mamaFluss2klein.jpg" alt="Christa">
-			<img src="pictures\pics\mamaHaeltPferdeklein.jpg" alt="Christa">
-			<br>
-			<br>
-			<img src="pictures\pics\hausklein.jpg" alt="Haus">
-			<img src="pictures\pics\paddock1klein.jpg" alt="Paddock">
-			<br>
-			<br>
-			<img src="pictures\pics\mamaTraktorklein.jpg" alt="Christa">
-			<img src="pictures\pics\paddock2klein.jpg" alt="Paddock">
-			<br>
-			<br>
-			<img src="pictures\pics\papaNahklein.jpg" alt="Peter">
-			<img src="pictures\pics\papaFlussklein.jpg" alt="Peter">
-			<br>
-			<br>
-			<img src="pictures\pics\papaFanziMeliklein.jpg" alt="Peter, Franziska und Meli">
-			<img src="pictures\pics\papaUmzugklein.jpg" alt="Peter">
-			<br>
-			<br>
-			<img src="pictures\pics\pferdekussklein.jpg" alt="Pferdekuss">
-			<img src="pictures\pics\reitenFahrradklein.jpg" alt="Fahrradfahren und Reiten">
-			<br>
-			<br>
-			<img src="pictures\pics\romanHeibenklein.jpg" alt="Roman">
-			<img src="pictures\pics\vogelansichtklein.jpg" alt="Vogelansicht">
-			<br>
-			<br>
-			<img src="pictures\pics\franziHintenklein2.jpg" alt="Franziska">
-			<img src="pictures\pics\mamaklein.jpg" alt="Christa">
-			
-			<p></p>
 		</div>		
 	</div>
   </body>
